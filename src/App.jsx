@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import './App.css'
+import "../src/index.css"
 import UsersForm from './assets/coponents/UsersForm'
 import UsersList from './assets/coponents/UsersList';
 
@@ -32,13 +33,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Hello World</h1>
-      <UsersForm 
-      getUsers={getUsers}
-      selectUser={selectUser}
-      userSelected={userSelected}
-      />
-      <div>
+      <div className='form-container'>
+        <h1 className='title'>Usuarios</h1>
+        <UsersForm
+        getUsers={getUsers}
+        selectUser={selectUser}
+        userSelected={userSelected}
+        />
+      </div>
+      <div className='user-container'>
         {
           users?.map(user => (
             <UsersList

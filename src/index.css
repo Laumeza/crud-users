@@ -1,3 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/*
+    font-family: 'Roboto', sans-serif;
+*/
+
+:root{
+    --btn-main-bg: #555A88;
+    --btn-delete-bg: #D85D5D;
+    --btn-delete-hover: #D93F3F;
+    --btn-edit-bg: #F7F7F7;
+    --title-font-color: #0F0F2D;
+    --label-font-color: #D3D3D3;
+    --text-font-color: #302F2F;
+    --white-font-color: #FFF;
+    --input-bg: #F9FAFC;
+    --input-border-color: #BDBDBD;
+    --btn-main-hover: #5E66B6;
+}
+
 *{
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.App{
+    display: flex;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+.title{
+    color: var(--title-font-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.form{
+    border: 1px solid var(--input-border-color);
+    border-radius: 0.25rem;
+    width: 419px;
+    padding: 2rem;
+    margin-top: 2rem ;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form__input-container{
+    margin-bottom: 1.5rem;
+}
+
+.form__label{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form__input{
+    width: 22.19rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    border: 1px solid var(--input-border-color);
+    background: var(--input-bg);
+    font: inherit;
+}
+
+.form__btn-submit{
+    width: 22.19rem;
+    height: 3rem;
+    background-color: var(--btn-main-bg);
+    font: inherit;
+    font-size: 1rem;
+    color: var(--white-font-color);
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form__btn-submit:hover{
+    background-color: var(--btn-main-hover);
+}
+
+.user-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.user{
+    border: 1px solid var(--input-border-color);
+    width: 23.9rem;
+    height: 17.1rem;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.user__name{
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--title-font-color);
+    margin-bottom: 1rem;
+}
+
+.user__info-container{
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.user__label{
+    display: block;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: var(--label-font-color);
+}
+
+.user__info{
+    font-weight: 400;
+    color: var(--text-font-color);
+    line-height: 1.2rem;
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    margin-top: 1.5rem;
+    justify-content: flex-end;
+    gap: 0.6rem;
+}
+
+.btn{
+    width: 2.7rem;
+    height: 2.7rem;
+    border-radius: 0.25rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn--delete{
+    background-color: var(--btn-delete-bg);
+    color: var(--white-font-color);
+    border: 1px solid var(--btn-delete-hover);
+}
+
+.btn--delete:hover{
+    background-color: var(--btn-delete-hover);
+    transform: scale(1.1);
+}
+.btn--edit{
+    background-color: var(--btn-edit-bg);
+    color: var(--input-border-color);
+    border: 1px solid var(--input-border-color);
+}
+
+.btn--edit:hover{
+    background-color: var(--btn-main-hover);
+    transform: scale(1.1);
 }
